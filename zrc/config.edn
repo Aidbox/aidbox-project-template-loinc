@@ -46,6 +46,10 @@
          :private #env BOX_AUTH_KEYS_PRIVATE
          :public #env BOX_AUTH_KEYS_PUBLIC}}
 
+ features
+ {:zen/tags #{aidbox.config/features}
+  :ftr {:pull {:enable true}}}
+
  base-config
  {:zen/tags                #{aidbox.config/config}
   :web                     web-config
@@ -53,7 +57,7 @@
   :search                  search-config
   :compatibility           compatibility-config
   :auth                    auth
-
+  :features                features
   :aidbox-license #env AIDBOX_LICENSE
 
   :fhir-version            "4.0.1"
